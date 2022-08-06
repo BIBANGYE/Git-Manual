@@ -32,7 +32,7 @@
 
 ### 查看用户信息
 
-> git config --global user.name 
+> git config --global user.name<br/>
 > git config --global user.email  
 
 ![git](assets/git-165976257813312.gif)
@@ -71,7 +71,7 @@
 
   **如果在一个已存在文件的文件夹（而非空文件夹）中进行版本控制，你应该开始追踪这些文件并进行初始提交。可以通过 `git add` 命令来指定所需的文件来进行追踪，然后执行 `git commit`**  
 
-  >  git add readme.txt
+  >  git add readme.txt<br/>
   >  $ git commit -m 'wrote a readme file'  
 
 ![git](assets/git-16597516686452.gif)
@@ -112,9 +112,9 @@
 
 可以用 `git status` 命令查看哪些文件处于什么状态。 如果在克隆仓库后立即使用此命令，会看到类似这样的输出  
 
-> $ git status
-> On branch master
-> Your branch is up-to-date with 'origin/master'.
+> $ git status<br/>
+> On branch master<br/>
+> Your branch is up-to-date with 'origin/master'.<br/>
 > nothing to commit, working directory clean  
 
 ![git](assets/git-16597522910216.gif)
