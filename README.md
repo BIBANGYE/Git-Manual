@@ -39,11 +39,11 @@
 
 ## 设置文本编辑器
 
-> $ git config --global core.editor “”  
+> git config --global core.editor “”  
 
 *在 Windows 系统上，如果你想要使用别的文本编辑器，那么必须指定可执行文件的完整路径*
 
-> $ git config --global core.editor “'E:/SublimeText/sublime_text.exe' --replace-all”
+> git config --global core.editor “'E:/SublimeText/sublime_text.exe' --replace-all”
 
 ### 检查配置
 
@@ -65,14 +65,14 @@
 
   在 Windows 上：也可以直接进入该文件夹位置，然后右键Git Bash Here，在当前文件夹打开Git Bash，之后执行：
 
-  > $ git init  
+  > git init  
 
   该命令将创建一个名为 .git 的子目录，这个子目录含有你初始化的 Git 仓库中所有的必须文件。 
 
   **如果在一个已存在文件的文件夹（而非空文件夹）中进行版本控制，你应该开始追踪这些文件并进行初始提交。可以通过 `git add` 命令来指定所需的文件来进行追踪，然后执行 `git commit`**  
 
   >  git add readme.txt<br/>
-  >  $ git commit -m 'wrote a readme file'  
+  >  git commit -m 'wrote a readme file'  
 
 ![git](assets/git-16597516686452.gif)
 
@@ -80,11 +80,11 @@
 
   克隆仓库的命令是 `git clone <url>` 。 比如，要克隆 Git 的链接库 `libgit2`，可以用下面的命令：  
 
-  > $ git clone https://github.com/libgit2/libgit2  
+  > git clone https://github.com/libgit2/libgit2  
 
   如果你想在克隆远程仓库的时候，自定义本地仓库的名字，你可以通过额外的参数指定新的目录名：  
 
-  > $ git clone https://github.com/libgit2/libgit2 mylibgit  
+  > git clone https://github.com/libgit2/libgit2 mylibgit  
 
   这会执行与上一条命令相同的操作，但目标目录名变为了 `mylibgit`  
 
@@ -112,7 +112,7 @@
 
 可以用 `git status` 命令查看哪些文件处于什么状态。 如果在克隆仓库后立即使用此命令，会看到类似这样的输出  
 
-> $ git status<br/>
+> git status<br/>
 > On branch master<br/>
 > Your branch is up-to-date with 'origin/master'.<br/>
 > nothing to commit, working directory clean  
@@ -123,7 +123,7 @@
 
 使用命令 `git add` 开始跟踪一个文件。 所以，要跟踪 `README.txt` 文件，运行：  
 
-> $ git add README.txt
+> git add README.txt
 
 注：
 
@@ -173,15 +173,15 @@ Git is free software.
 
 每次准备提交前，先用 `git status` 看下，所需要的文件是不是都已暂存起来了， 然后再运行提交命令`git commit`：  
 
-> $ git commit -v 
+> git commit -v 
 
 注：更详细的内容提示可以用  `-v` :将你所做的更改 diff 输出呈现在编辑器中
 
-> $ git commit  -m 提交信息
+> git commit  -m 提交信息
 
 可以在 commit 命令后添加 `-m` 选项，将提交信息与命令放在同一行  
 
-> $ git commit -a
+> git commit -a
 
 Git会自动把所有已经跟踪过的文件暂存起来一并提交，跳过 `git add` 步骤。
 
@@ -194,7 +194,7 @@ Git会自动把所有已经跟踪过的文件暂存起来一并提交，跳过 `
 
 # 删除文件
 
-> $ rm a.txt
+> rm a.txt
 
 删除 a.txt 文件
 
@@ -202,7 +202,7 @@ Git会自动把所有已经跟踪过的文件暂存起来一并提交，跳过 `
 
 找回被删除的文件，并恢复到最新版本（*会丢失最近一次提交后你修改的内容*）。
 
-> $ git checkout
+> git checkout
 
 ![image-20220806113142262](assets/image-20220806113142262.png)
 
@@ -260,7 +260,7 @@ Git会自动把所有已经跟踪过的文件暂存起来一并提交，跳过 `
 
 显示历史操作记录
 
-> $ git reflog  
+> git reflog  
 
 ![image-20220806111708019](assets/image-20220806111708019.png)
 
@@ -272,7 +272,7 @@ Git会自动把所有已经跟踪过的文件暂存起来一并提交，跳过 `
 
 # 撤销修改
 
-> $ git restore  a.txt
+> git restore  a.txt
 
 命令git restore  a.txt意思就是把 a.txt文件在工作区的修改全部撤销，这里有两种情况：  
 
@@ -285,7 +285,7 @@ Git会自动把所有已经跟踪过的文件暂存起来一并提交，跳过 `
 
 提交完了才发现漏掉了几个文件没有添加，或者提交信息写错了  
 
-> $ git commit --amend  
+> git commit --amend  
 
 这个命令会将暂存区中的文件提交。 如果在上次提交后马上执行了此命令， 那么快照会保持不变，而所修改的只是提交信息。
 文本编辑器启动后，可以看到之前的提交信息。 编辑后保存会覆盖原来的提交信息。  （最终你只会有一个提交——第二次提交将代替第一次提交的结果  ） 
