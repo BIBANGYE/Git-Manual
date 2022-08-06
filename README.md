@@ -23,7 +23,7 @@
 
 安装完 Git 之后，要做的第一件事就是设置用户名和邮件地址。因为每一次 Git 提交都会使用这些信息，它们会写入到你的每一次提交中，不可更改：  
 
-> git config --global user.name "John Doe"
+> git config --global user.name "John Doe"<br/>
 > git config --global user.email johndoe@example.com  
 
 ✨：如果使用了 **`--global`** 选项，表示你这台机器上所有的Git仓库都会使用这个配置
